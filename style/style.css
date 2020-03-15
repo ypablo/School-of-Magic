@@ -1,17 +1,31 @@
-* {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
-  }
+    margin:0;
+    padding: 0;
+}
+
+
+:root {
+    --ff-primary:'Source Code Pro', sans-serif;
+    --ff-secondary: 'Source Sans Pro', sans-serif;
+    --fw-reg: 300;
+    --fw-bold: 900;
+
+    --clr-light:#ecf0f1;
+    --clr-dark: #6D6E70;
+    --clr-accent:#3498db;
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+
+    --bs: .4em .5em 1em rgba(0,0,0,.5);
+}
   
-  .clearfix::after, .clearfix::before {
-      content: "";
-      display: table;
-      clear: both;
-  }
-  body {
-      margin:0;
-      padding: 0;
-  }
-  
+  /*
   .col-1 {width: 8.334%} 
   .col-2 {width: 16.667%} 
   .col-3 {width: 25%}  
@@ -24,90 +38,138 @@
   .col-10 {width: 83.334%}
   .col-11 {width: 91.667%}
   .col-12 {width: 100%}
+  */
+
+/* Navigation bar */
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 50px;
+  background-color: #313234;  
+  padding: 5px 20px;
+  position: fixed;
+  width: 100%;
+}
+.nav_links { 
+  list-style-type: none;
+  margin-right: 15rem;
+}
+.nav_links li {
+  display: inline-block;
+  padding: 0 2rem;
+}
+.nav_links li a {
+  transition: all .3s ease 0s;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-h3); 
+  color: var(--clr-light);
+  text-decoration: none; 
+  margin: 0 auto;
+}
+.nav_links li a:hover {
+  color: orange;
+}
+.logo {
+  margin-right: auto ;
+}
+
+/* Hamburger */
+.toggle {
+  padding: .5em;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  z-index: 1000;
+}
+.hamburger {
+  display: block;
+  position: relative;
+}
+.hamburger,
+.hamburger::before, 
+.hamburger::after {
+  background-color:var(--clr-light);
+  height: .2rem;
+  width: 2rem;;
+}
+.hamburger::before, 
+.hamburger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.hamburger::before {
+  top: .5rem;
+}
+.hamburger::after {
+  bottom: .5rem;
+}
+
+
+
+.hero {
+  background-image: url("https://goo.gl/tLi2Be");	
+  background-image: transparent;
+  height: 500px;
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+  width: 100%;	
+}
+.slogan {
+  float: left;
+  display: table;
+  color: #fff;
+  font-weight: bold;
+  background-color: rgba(0,0,0,0.5);
+  padding: 15px;
   
-  .container {
-      height: 50px;
-      background-color: #313234;
-      width: 100%;
-      margin: 0 auto;
-  }
-  header {
-      position: fixed;
-      width: 100%;
-      top: 0;
-      left: 0;
-      bottom 0;
-      right 0;
-      z-index: 10;
-  }
-  header>nav ul {
-      padding: 0;
-      margin: 0;
-      list-style-type: none;
-      float: right;
-      overflow: auto;		
-  }
-  header>nav ul>li {
-      float:right;
-      margin; 0;
-      vertical-align: middle;
-  }
-  header>nav ul>li>a {
-      padding: 0 20px;
-      margin-top: 15px;
-      display: inline-block;
-      color: #fff;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-weight: bold;
-  }
-  header>nav ul>li>a:hover {
-        color: #6D6E70;	
-  }
-  header>nav img {
-        padding: 10px;
-  }
-  .hero {
-      background-image: url("https://goo.gl/tLi2Be");	
-      height: 500px;
-      background-position: center; 
-      background-repeat: no-repeat;
-      background-size: cover;
-      padding: 0;
-      margin 0;
-      width: 100%;	
-  }
-  .slogan {
-      float: right;
-      display: table;
-      color: #fff;
-      font-weight: bold;
-      background-color: rgba(0,0,0,0.5);
-      padding: 20px;
-      padding-left: 40px;
-      margin: 0 auto;
-      font-size: 38px;
-      text-align: center;
-      max-width: 800px;
-      transform: translate(0%, 50%);		
-  }
-  .benefits {
-      margin-top:50px;
-      text-align: center;
-  }
-  .row>.col-4 {
-      float: left;
-      display: inline-block;
-  }
-  [class*="fas fa-"] {
-        font-size: 40px;	
-  }
-  .works {
-      float: left;
-      display: inline-block;
-      text-align: center;	
-      padding: 10px;
-  }
+  margin: 0 auto;
+  font-size: 38px;
+  text-align: center;
+  width: 60%;
+  max-width: 900px;
+  transform: translate(0%, 50%);
+      
+}
+
+
+.benefits {
+  display: flex;
+  margin-top: 2rem;
+  text-align: center;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+[class*="fas fa-"] {
+  font-size: 40px;	
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 1200px;	
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+}
+
+
+
+
+
   .gallery1,.gallery2 {
       margin: 0; 		
       height: 250px;

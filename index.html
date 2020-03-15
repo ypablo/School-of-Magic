@@ -10,27 +10,29 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:400,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
-
 </head>
 <body>
-    <header>
-        <nav class="container clearfix">
-                <img class="img1" src="//placehold.it/150x30">
-                <ul class="ul">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Tuition</a></li>
-                    <li><a href="#">Projects</a></li>
-                </ul>
-        </nav>
+
+    <header class="navbar">
+        <img class="logo" src="img/logo.png" alt="logo">
+        <ul class="nav_links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li> 
+        </ul>
+        <button class="toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>  
     </header>
+
     <section class="hero">
         <div class="slogan">
             <h1>'Ban - Ard'</h1>
             <h3>School of Magic</h3>
         </div>
     </section>
-    <section class="benefits clearfix">
-        <div class="row clearfix">
+
+    <section class="benefits">
             <div class="col-4">
                 <i class="fas fa-ghost"></i>
                 <h3>FORTELLING</h3>
@@ -46,25 +48,27 @@
                 <h3>POTIONS</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
-        </div>
     </section>
     
-    <section class="feature clearfix">
-        <div class="works col-3"></div>
-        <div class="works col-6">
-            <h1>FEATURED WORKS</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-        <div class="works col-3"></div>
+    <section class="feature"> 
+        <h1>FEATURED WORKS</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
     </section>
     
+
+<!--
     <section class="gallery1 clearfix">
         <div class="gal col-2">
             <div class="layer">
                 <i class="fas fa-share-alt"></i>
                 <i class="fas fa-search"></i>
             </div>
-                <img src="https://goo.gl/qFkYX7" alt="">
+               <img src="https://goo.gl/qFkYX7" alt="">
             <div class="inv"></div>
         </div>	
         <div class="gal col-2">
@@ -72,7 +76,7 @@
                 <i class="fas fa-share-alt"></i>
                 <i class="fas fa-search"></i>
             </div>
-            <img src="https://goo.gl/o2VSBD" alt="">
+                 <img src="https://goo.gl/o2VSBD" alt="">
             <div class="inv"></div>
         </div>
         <div class="gal col-2">
@@ -80,7 +84,7 @@
                 <i class="fas fa-share-alt"></i>
                 <i class="fas fa-search"></i>
             </div>
-            <img src="https://goo.gl/mqgqgF" alt="">
+                 <img src="https://goo.gl/mqgqgF" alt="">
             <div class="inv"></div>
         </div>
         <div class="gal col-2">
@@ -88,7 +92,7 @@
                 <i class="fas fa-share-alt"></i>
                 <i class="fas fa-search"></i>
             </div>
-            <img src="https://bit.ly/2PnJo7f" alt="">
+                 <img src="https://bit.ly/2PnJo7f" alt="">
             <div class="inv"></div>
         </div>
         <div class="gal col-2">
@@ -96,7 +100,7 @@
                 <i class="fas fa-share-alt"></i>
                 <i class="fas fa-search"></i>
             </div>
-            <img src="https://bit.ly/2ObYxDY" alt="">
+             <img src="https://bit.ly/2ObYxDY" alt="">
             <div class="inv"></div>
         </div>
         <div class="gal col-2">
@@ -104,7 +108,7 @@
                 <i class="fas fa-share-alt"></i>
                 <i class="fas fa-search"></i>
             </div>
-            <img src="https://goo.gl/wkayqG" alt="">
+                 <img src="https://goo.gl/wkayqG" alt="">
             <div class="inv"></div>
         </div>	
     </section>
@@ -114,7 +118,7 @@
                 <i class="fas fa-share-alt"></i>
                 <i class="fas fa-search"></i>
             </div>
-            <img src="https://goo.gl/wkayqG" alt="">
+                 <img src="https://goo.gl/wkayqG" alt="">
             <div class="inv"></div>
         </div>	
         <div class="gal col-2">
@@ -122,7 +126,7 @@
                 <i class="fas fa-share-alt"></i>
                 <i class="fas fa-search"></i>
             </div>
-            <img src="https://bit.ly/2ObYxDY" alt="">
+                 <img src="https://bit.ly/2ObYxDY" alt="">
             <div class="inv"></div>
         </div>
         <div class="gal col-2">
@@ -130,7 +134,7 @@
                 <i class="fas fa-share-alt"></i>
                 <i class="fas fa-search"></i>
             </div>
-            <img src="https://bit.ly/2PnJo7f" alt="">
+             <img src="https://bit.ly/2PnJo7f" alt="">
             <div class="inv"></div>
         </div>
         <div class="gal col-2">
@@ -138,7 +142,7 @@
                 <i class="fas fa-share-alt"></i>
                 <i class="fas fa-search"></i>
             </div>
-            <img src="https://goo.gl/mqgqgF" alt="">
+             <img src="https://goo.gl/mqgqgF" alt="">
             <div class="inv"></div>
         </div>
         <div class="gal col-2">
@@ -146,7 +150,7 @@
                 <i class="fas fa-share-alt"></i>
                 <i class="fas fa-search"></i>
             </div>
-            <img src="https://goo.gl/o2VSBD" alt="">
+                 <img src="https://goo.gl/o2VSBD" alt="">
             <div class="inv"></div>
         </div>
         <div class="gal col-2">
@@ -154,7 +158,7 @@
                 <i class="fas fa-share-alt"></i>
                 <i class="fas fa-search"></i>
             </div>
-            <img src="https://goo.gl/qFkYX7" alt="">
+             <img src="https://goo.gl/qFkYX7" alt="">
             <div class="inv"></div>
         </div>	
     </section>
@@ -162,10 +166,10 @@
     <section class="team clearfix">
         <div class="member col-3">
             <div class="layer2">
-                <img src="https://goo.gl/bTHLQ7" alt="">
+                 <img src="https://goo.gl/bTHLQ7" alt="">
                 <div class="inv2"></div>
             </div>
-            <p class="position">Manager<p>
+            <p class="position">Founder<p>
             <p class="common">Gandalf the Grey</p>	
         </div>
         <div class="member col-3">
@@ -173,7 +177,7 @@
                 <img src="https://goo.gl/Jce6YG" alt="">
                 <div class="inv2"></div>
             </div>	
-            <p class="position">Director<p>
+            <p class="position">General Manager<p>
             <p class="common">Albus Dumbledore</p>
         </div>
         <div class="member col-3">
@@ -181,7 +185,7 @@
                 <img src="https://goo.gl/9buQ7W" alt="">
                 <div class="inv2"></div>
             </div>	
-            <p class="position">Secretary<p>	
+            <p class="position">HR Manager<p>	
             <p class="common">Hermione Granger</p>	
         </div>
         <div class="member col-3">
@@ -189,7 +193,7 @@
                 <img src="https://goo.gl/zHd6wN" alt="">
                 <div class="inv2"></div>
             </div>	
-            <p class="position">Assistant</p>
+            <p class="position">Deputy Manager</p>
             <p class="common">Mike Tyson</p>		
         </div>
     </section>
@@ -294,5 +298,7 @@
         </div>
       
     </section>
+
+-->
 </body>
 </html>
