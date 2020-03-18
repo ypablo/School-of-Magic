@@ -4,6 +4,7 @@
     box-sizing: border-box;
     margin:0;
     padding: 0;
+    
 }
 
 
@@ -24,21 +25,10 @@
 
     --bs: .4em .5em 1em rgba(0,0,0,.5);
 }
-  
-  /*
-  .col-1 {width: 8.334%} 
-  .col-2 {width: 16.667%} 
-  .col-3 {width: 25%}  
-  .col-4 {width: 33.334%} 
-  .col-5 {width: 41.667%} 
-  .col-6 {width: 50%} 
-  .col-7 {width: 58.334%} 
-  .col-8 {width: 66.667%}
-  .col-9 {width: 75%} 
-  .col-10 {width: 83.334%}
-  .col-11 {width: 91.667%}
-  .col-12 {width: 100%}
-  */
+
+body {
+  /*font-family: var(--ff-primary);*/
+}
 
 /* Navigation bar */
 .navbar {
@@ -111,9 +101,9 @@
 }
 
 
-
+/*Logo */
 .hero {
-  background-image: url("https://goo.gl/tLi2Be");	
+  background-image: url("../img/wizard-01.jpeg");	
   background-image: transparent;
   height: 500px;
   background-position: center; 
@@ -130,7 +120,6 @@
   font-weight: bold;
   background-color: rgba(0,0,0,0.5);
   padding: 15px;
-  
   margin: 0 auto;
   font-size: 38px;
   text-align: center;
@@ -140,7 +129,7 @@
       
 }
 
-
+/* Benefits */
 .benefits {
   display: flex;
   margin-top: 2rem;
@@ -148,12 +137,21 @@
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  font-size: 1.2rem;
 }
-
 [class*="fas fa-"] {
-  font-size: 40px;	
+  font-size: 40px;
 }
-
+.benefits h3 {
+  margin-bottom: 1rem;
+}
+.col-4 {
+  padding: 1rem;
+}
+.col-4:nth-child(2) {
+  border: 1px solid #000000;
+  border-width: 0 1px;
+}
 .feature {
   display: flex;
   flex-direction: column;
@@ -164,62 +162,72 @@
   margin-left: auto;
   margin-right: auto;
   padding: 1rem;
+  font-size: 1.2rem;
+}
+
+/* Gallery */
+.gallery1,.gallery2 {
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 6fr));
+  margin: 0 auto;
+  border: 1px solid black;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background: #000000;
+}
+.gal {
+  margin: 0 auto; 
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+.gal img {
+  object-fit: cover;	
+  height: 100%;
+  width: 100%;
+  transition: transform 500ms cubic-bezier(0.55, 0, 0.675, 1), opacity 250ms linear;
+}
+.gal:hover img, .gal:focus img{ 
+  transform: scale(1.2);
+  opacity: .3; 
+}
+.gal:hover .layer {
+  transform: scale(1.5);
+  opacity: 1;
+}
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-transform: uppercase;
+  color: var(--clr-light);
+  background-color: transparent;
+  transition: .5s ease-in-out;
+  opacity: 0;
 }
 
 
 
+.team {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  max-width: 1200px;
+  max-height: 400px;;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
+}
 
 
-  .gallery1,.gallery2 {
-      margin: 0; 		
-      height: 250px;
-  }
-  
-  .gal.col-2 {
-      float: left;
-      display: inline-block;
-      margin: 0; 
-      position: relative;
-      height: 100%;
-  }
-   .gal.col-2 img {
-      object-fit: cover;	
-      height: 100%;
-      width: 100%;
-   }
-   .inv {
-      background-color: rgba(0,0,0,0.5);
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      transform: translate(0%, 16%);
-      opacity: 0;
-   }
-   .inv:hover {
-        opacity:1;	
-   }
-  .layer {
-      color: white;
-      position: inline-block;
-      top: 0;
-      left: 0;
-      transform: translate(0%, 350%);
-      text-align: center;	
-      margin:0;
-      transition: .3s ease-in-out;
-      opacity:0;
-  }
-  .gal:hover .layer {
-      opacity: 1;
-      color: #fff;	
-  }	
-  
-  .team {
-      text-align: center;	
-      margin-top: 100px;	
-  }
+
   .layer2 img {
       vertical-align: middle;
       width: 50%;
@@ -227,10 +235,7 @@
       object-fit: cover;
       border-radius:50%;
   }
-  .member.col-3 {
-      float: left;
-      display: inline-block;	
-  }
+  
   .layer2 {
       position: relative;
       display: inline-block;
@@ -272,6 +277,14 @@
   .member p {
         font-weight: bold;	
   }
+
+
+
+
+
+
+
+  
   .awesome {
         margin-top: 50px;
   }
