@@ -181,6 +181,7 @@ body {
   padding: 0;
   overflow: hidden;
   position: relative;
+  cursor: pointer;
 }
 .gal img {
   object-fit: cover;	
@@ -284,7 +285,7 @@ body {
 
 
 
-  
+
   .awesome {
         margin-top: 50px;
   }
