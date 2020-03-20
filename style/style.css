@@ -232,105 +232,72 @@
 }
 
 
-
+/* Notalble alumni */
 .team {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin: 1rem 0;
   max-width: 1200px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  flex-wrap: wrap;
 }
-
-.member {
-  display: inline-block; 
-}
-.member:first-child {
-  width: 100%;
-  margin: 2rem 0;
+.team_title {
   background-color: var(--clr-accent);
   font-size: var(--fs-h1);
+  width: 100%;
+  margin: 1rem 0;
   opacity: .7;
   color: var(--clr-light);
   border-bottom: 3px solid var(--clr-dark);
 }
-.member:not(:first-child) {
-  flex: 1;
-  min-height: 300px;
+.members {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
 }
-
+.member {
+  padding: 1rem;
+  position: relative;
+}
 .member img {
-  vertical-align: middle;
   width: 50%;
   height: 50%;
   object-fit: cover;
-  border-radius:50%;
   box-shadow: var(--bs);
   background-color: var(--clr-dark);
 }
-
-
-.member_title {
-  font-size: var(--fs-h2);
+.alumni_name {
+  font-size: var(--fs-h3);
 }
-
-
-
-
-  .layer2 img {
-      vertical-align: middle;
-      width: 50%;
-      height: 50%;
-      object-fit: cover;
-      border-radius:50%;
-      box-shadow: var(--bs);
-  }
-  
-  .layer2 {
-      position: relative;
-      display: inline-block;
-      transition: .3s ease-in-out;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;	
-  }
-  .inv2 {
-      background-color: rgba(0,0,0,0.5);
-      position: absolute;
-      object-fit: cover;
-      top:0;
-      left:25%;
-      width: 50%;
-      height: 100%;
-      border-radius:50%;
-      transition: .3s ease-in-out;
-      opacity: 0;
-  }
-  .inv2:hover {
-      opacity:1;
-      cursor: pointer;
-  }
-  .position {
-      opacity: 0;
-      transform: translate(0, -100px);
-      text-align: center;	
-      color: white;
-      font-size: 18px;
-      font-weight: bold;
-      transition: 0.5s ease-in-out;	
-  }
-  .member:hover .position {
-      opacity: 1;
-      cursor: pointer;
-  }
-  .member p {
-    font-size: var(--fs-h3);
-    font-weight: 700;	
-  }
-
+.member:hover img {
+  cursor: pointer;
+}
+.member p {
+  font-size: var(--fs-h3);
+  font-weight: 700;	
+  transition: .7s ease-in-out;
+}
+.member:hover .shade, .member:hover p{
+  opacity: .7;
+  color: var(--clr-light);
+}
+.shade {
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height:25%;
+  padding: 1rem;
+  background-color: var(--clr-accent);
+  transition: .7s ease-in-out;
+  z-index: -1;
+}
 
 
 
