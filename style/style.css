@@ -16,8 +16,8 @@
 
     --clr-light:#ecf0f1;
     --clr-dark: #6D6E70;
-    --clr-accent:   #7b241c
-    ;     ;
+    --clr-darker: #313234;
+    --clr-accent:   #7b241c;
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -27,13 +27,22 @@
     --bs: .4em .5em 1em rgba(0,0,0,.5);
 }
 
+body {
+  background-color: var(--clr-light);
+  color: var(--clr-dark);
+  margin: 0;
+  /*font-family: var(--ff-primary);*/
+  font-size: var(--fs-body);
+  line-height: 1.6;
+}
+
 /* Navigation bar */
 .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
-  background-color: #313234;  
+  background-color: var(--clr-darker);  
   padding: 5px 20px;
   position: sticky;
   width: 100%;
@@ -146,9 +155,11 @@
 }
 [class*="fas fa-"] {
   font-size: 40px;
+  color: var(--clr-darker);
 }
 .benefits h3 {
   margin-bottom: 1rem;
+  color: var(--clr-darker);
 }
 .col-4 {
   padding: 1rem;
@@ -188,7 +199,7 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 5fr));
   margin: 0 auto;
   overflow: hidden;
-  background: #000000;
+  background: var(--clr-darker);
 }
 .gallery1 {
   margin-top: 1rem;
@@ -231,7 +242,6 @@
   opacity: 0;
 }
 
-
 /* Notalble alumni */
 .team {
   display: flex;
@@ -267,35 +277,41 @@
   object-fit: cover;
   box-shadow: var(--bs);
   background-color: var(--clr-dark);
+  transition: .7s ease-in-out;
 }
 .alumni_name {
   font-size: var(--fs-h3);
 }
-.member:hover img {
-  cursor: pointer;
-}
 .member p {
   font-size: var(--fs-h3);
   font-weight: 700;	
-  transition: .7s ease-in-out;
+  transition: .5s ease-in-out;
+  margin-top: .5rem;
+  line-height: 1.6;
 }
-.member:hover .shade, .member:hover p{
-  opacity: .7;
-  color: var(--clr-light);
+.member:hover p{
+  color: var(--clr-darker);
+  
+}
+
+
+.member:hover .shade { 
+  opacity: .5;
+}
+.member:hover img {
+  cursor: pointer;
+  filter: brightness(175%);
 }
 .shade {
   opacity: 0;
   position: absolute;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height:25%;
+  bottom: 25%;
+  left: 25%;
+  width: 45%;
+  height: 72%;
   padding: 1rem;
   background-color: var(--clr-accent);
-  transition: .7s ease-in-out;
+  transition: .5s ease-in-out;
   z-index: -1;
 }
 
