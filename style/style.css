@@ -139,8 +139,7 @@ body {
   text-align: center;
   width: 60%;
   max-width: 900px;
-  transform: translate(0%, 50%);
-      
+  transform: translate(0%, 50%);   
 }
 
 /* Benefits */
@@ -162,8 +161,7 @@ body {
   color: var(--clr-darker);
 }
 .col-4 {
-  padding: 1rem;
-  
+  padding: 1rem; 
 }
 .col-4:nth-child(2) {
   border: 1px solid #000000;
@@ -186,10 +184,11 @@ body {
   background-color: var(--clr-accent);
   font-size: var(--fs-h1);
   width: 100%;
-  margin: 1rem 0;
+  margin: 1rem 0 1rem 0;
   opacity: .7;
   color: var(--clr-light);
   border-bottom: 3px solid var(--clr-dark);
+  text-transform: uppercase;
 }
 
 /* Gallery */
@@ -247,7 +246,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 1rem 0;
+  margin: 1rem 0 1rem 0;
   max-width: 1200px;
   text-align: center;
   margin-left: auto;
@@ -257,10 +256,11 @@ body {
   background-color: var(--clr-accent);
   font-size: var(--fs-h1);
   width: 100%;
-  margin: 1rem 0;
+  margin: 0 0 1rem 0;
   opacity: .7;
   color: var(--clr-light);
   border-bottom: 3px solid var(--clr-dark);
+  text-transform: uppercase;
 }
 .members {
   display: flex; 
@@ -291,10 +291,7 @@ body {
 }
 .member:hover p{
   color: var(--clr-darker);
-  
 }
-
-
 .member:hover .shade { 
   opacity: .5;
 }
@@ -310,302 +307,309 @@ body {
   width: 45%;
   height: 72%;
   padding: 1rem;
-  background-color: var(--clr-accent);
+  background-color: var(--clr-dark);
   transition: .5s ease-in-out;
   z-index: -1;
 }
 
+/* Project */
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 0 1rem 0;
+  max-width: 1200px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.project_title {
+  background-color: var(--clr-accent);
+  font-size: var(--fs-h1);
+  width: 100%;
+  margin: 0 0 1rem 0;
+  opacity: .7;
+  color: var(--clr-light);
+  border-bottom: 3px solid var(--clr-dark);
+  text-transform: uppercase;
+}
+.projects {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+.title_left { 	
+  background-color:var(--clr-dark);
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+.title_left img {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  object-fit: cover;
+}
+.title_right {
+  font-size: 1.2rem;
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+  margin: 0 1rem ; 
+}
+.title_right p {
+  white-space: wrap; 
+  text-overflow: ellipsis;
+  text-align: left;
+}
 
+/* Rankings */
+.rankings {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 0 1rem 0;
+  max-width: 1200px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.rankings_title {
+  background-color: var(--clr-accent);
+  font-size: var(--fs-h1);
+  width: 100%;
+  margin: 0 0 1rem 0;
+  opacity: .7;
+  color: var(--clr-light);
+  border-bottom: 3px solid var(--clr-dark);
+  text-transform: uppercase;
+}
+.data {
+  display: flex; 
+  justify-content: center;
+  align-items: start;
+  flex-direction: row;
+  height: 200px;
+}
+.ranking {
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #000;
+}
+.ranking:nth-child(odd) {
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+}
+.ranking h1 {
+  text-align: center;
+  width: 200px;
+}
+.ranking p {
+  font-size: 1.2rem;
+  opacity: .7;
+  color: var(--clr-accent);
+  text-transform: uppercase;
+  text-align: center;
+}
 
+/* Footer */
+.footer_row {		
+  display: grid;
+  grid-template-columns: 1fr 1fr 34%;
+  grid-template-rows: auto;
+  background-color:var(--clr-dark);
+  width: 100%;
+  max-width: 1200px;
+  height: 300px;
+  overflow: auto;
+  margin: 0 auto;
+}
+.footer_column {
+  color:var(--clr-light);
+  padding: .5rem;
+  text-align: center;
+}
+.contacts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "address address"
+    ".       address"
+    "phone phone"
+    ".     phone"
+    "email email";
+  justify-content: start;
+  align-content: start;
+}
+.address_1, .phone_1, .email_1  {
+  width: 100%;
+  text-align: end;
+  padding: 0 .5rem 0 0;
+}
+.address_2, .phone_2, .email_2 {
+  width: 100%;
+  text-align: start;
+  padding: 0;
+}
+.social_btns {
+  margin: 1rem 0;
+}
+[class*="fab fa-"] {
+  font-size: 2.5rem;
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+}
+[class*="fab fa-"]:hover {
+  color: var(--clr-accent);
+  background-color: var(--clr-dark);
+  cursor: pointer;
+}
+[class*="icon-btn"] {
+  margin: .5rem 1rem;
+  border-style: none;
+}
+.copyrights {
+  text-align: center;
+  background-color: var(--clr-darker);
+  max-width: 1200px;
+  height: 35px;
+  top:0;
+  bottom:0;
+  right:0;
+  left:0;
+  color:var(--clr-light);
+  font-size: 1.2rem;	
+  margin: 0 auto;
+}  
 
-
-
-
-  .awesome {
-        margin-top: 50px;
+    
+@media (max-width: 768px) {
+  .container{
+    height: 100px;
+    width: 100%;  
   }
-  .title {
-      float: left;
-      display: inline-block;	
-      background-color: grey;
-      height: 250px;
-      overflow: auto;
+  .container>.ul {
+    display: flex;
+    align-items: center;
+    justify-items: space-around;
   }
-  .title img {
-      width: 90%;
-      height: 95%;
-      padding: 5px;
-      object-fit: cover;
-      vertical-align: middle;
+  .container img{
+    display: block;
+    margin: 0 auto;
   }
-  .title p {
-      column-count: 3;
-      margin-right: 25px;		
+  .container li {
+    margin-right: 8px;  
   }
-  .title h1 {
-        color: orange;	
+  .row>.col-4{
+    width: 100%;
+    text-align: center;
   }
-  
-  .ranking {
-      float: left;
-      display: inline-block;
-      padding: 0;
+  .works {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
   }
-  .ranking h1 {
-      font-size: 42px;
-      text-align: center;
+  .gallery2{
+    display: none;
+  }
+  .gal {
+    width: 100%;
+    display: block;  
+    }
+  .gal:hover img  {
+      width: 200%;
+  }	
+  .team {
+    margin: 0;
+  }
+  .position {
+      transform: translate(0, 0);
+      font-size: 12px;
       font-weight: bold;
   }
-  
-  .ranking p {
-      font-size: 20px;
-      color: orange;
-      text-transform: uppercase;
-      text-align: center;
+    .layer2 img {
+    transform: translate(0, 50px); 
+    width: 75%;
+      height: 75%;
+    }
+  .inv2 {
+    transform: translate(0, 50px);
+  } 
+  .common {
+    transform: translate(0, 25px);
+    font-size: 12px;
+  }
+  .title p {
+      column-count: 1;
   }
   
-  .row1 {		
-      background-color: #808080;
-      top:0;
-      bottom:0;
-      right:0;
-      left:0;
+  .column.col-2 {
+    width: 0;
+  }
+  .column>.col-4 {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .column>.col-3 {
       width: 100%;
-      height: 350px;
-      overflow: auto;
-      margin: 0 auto;
+    margin: 0 auto;
   }
   
-  .row2 {
-      text-align: center;
-      background-color: #313234;
-      width: 100%;
-      height: 50px;
-      top:0;
-      bottom:0;
-      right:0;
-      left:0;
-      color: white;
-      text-size: 18px;	
-      margin: 0 auto;
-  }
-  .column {
-      float: right;
-      display: inline-block;
-      color: white;
-  }
   .column p {
-      font-size: 14px;	
+    font-size: 12px; 
+    text-align: center;
   }
-  
-  .address, .phone, .email {	
-      display: grid;
-      width: 100%;
-      grid-template-columns: 20% 80%;
-      grid-template-rows: auto;
-      grid-auto-rows: 120px;
-  }
-  .address.nested.col-1 {
-      grid-column: 1;
-      grid-row: 1;  
-   }
-   .address.nested.col-2 {
-       grid-column: 2;
-      grid-row: 1;  
-  }
-  .phone.nested.col-1 {
-      grid-column: 1;
-      grid-row: 2;
-   }
-   .phone.nested.col-2 {
-      grid-column: 2;
-      grid-row: 2;
-   }
-  .email.nested.col-1 {
-      grid-column: 1;
-      grid-row: 3;
-   }
-  .email.nested.col-2 {
-      grid-column: 2;
-      grid-row: 3;
-   }
-  
-  @media (max-width: 1200px) {
-    .col-m-1 {width: 8.334%} 
-    .col-m-2 {width: 16.667%} 
-    .col-m-3 {width: 25%}  
-    .col-m-4 {width: 33.334%} 
-    .col-m-5 {width: 41.667%} 
-    .col-m-6 {width: 50%} 
-    .col-m-7 {width: 58.334%} 
-    .col-m-8 {width: 66.667%}
-    .col-m-9 {width: 75%} 
-    .col-m-10 {width: 83.334%}
-    .col-m-11 {width: 91.667%}
-    .col-m-12 {width: 100%}
-   
-    .container, .hero, .benefits, .feature, .gallery1, .gallery2, .team, .awesome, .numbers, .footer {
-      width: 100%;
-    }
-    
-    .title p {
-        column-count: 2;
-    }
-    .column h1 {
-      text-align: center;
-    }
-    .column p {
-      text-align: center;
-    }
-    
-    .address, .phone, .email {
-      margin: 0 auto;
-    }
-    .buttons {
-      text-align: center;
-    }
+  .column h1 {
+    font-size: 16px;
+    text-decoration: underline;
+    text-align: center;
   }
   
   
-    
-  @media (max-width: 768px) {
-    .col-s-1 {width: 8.334%} 
-    .col-s-2 {width: 16.667%} 
-    .col-s-3 {width: 25%}  
-    .col-s-4 {width: 33.334%} 
-    .col-s-5 {width: 41.667%} 
-    .col-s-6 {width: 50%} 
-    .col-s-7 {width: 58.334%} 
-    .col-s-8 {width: 66.667%}
-    .col-s-9 {width: 75%} 
-    .col-s-10 {width: 83.334%}
-    .col-s-11 {width: 91.667%}
-    .col-s-12 {width: 100%}
-    
-    .container{
-      height: 100px;
-      width: 100%;  
-    }
-    .container>.ul {
-      display: flex;
-      align-items: center;
-      justify-items: space-around;
-    }
-    .container img{
-      display: block;
-      margin: 0 auto;
-    }
-    .container li {
-      margin-right: 8px;  
-    }
-    .row>.col-4{
-      width: 100%;
-      text-align: center;
-    }
-    .works {
-      width: 100%;
-      padding: 0;
-      margin: 0 auto;
-      text-align: center;
-    }
-    .gallery2{
-      display: none;
-    }
-    .gal {
-     width: 100%;
-      display: block;  
-     }
-    .gal:hover img  {
-        width: 200%;
-    }	
-    .team {
-      margin: 0;
-    }
-    .position {
-        transform: translate(0, 0);
-        font-size: 12px;
-        font-weight: bold;
-    }
-      .layer2 img {
-      transform: translate(0, 50px); 
-      width: 75%;
-        height: 75%;
-      }
-    .inv2 {
-      transform: translate(0, 50px);
-    } 
-    .common {
-      transform: translate(0, 25px);
-      font-size: 12px;
-    }
-    .title p {
-        column-count: 1;
-    }
-    
-    .column.col-2 {
-      width: 0;
-    }
-    .column>.col-4 {
-      width: 100%;
-      margin: 0 auto;
-    }
-    .column>.col-3 {
-       width: 100%;
-      margin: 0 auto;
-    }
-    
-    .column p {
-      font-size: 12px; 
-      text-align: center;
-    }
-    .column h1 {
-      font-size: 16px;
-      text-decoration: underline;
-      texy-align: center;
-    }
-    
-    
-    .test {
-      float: none;
-      display: initial;
-      width: 100%;
-      text-align: center;
-    }
-    .row1 {
-      height: auto;
-      margin: 0 auto;
-      overflow: none;
-      width: 100%
-    }
-    .address, .phone, .email {
-      display: grid;
-        grid-template-columns: 100px 1fr 1fr auto;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas: 
-        ". address.nested.col-1 address.nested.col-2 ."
-        ". phone.nested.col-1 phone.nested.col-2 ."
-        ". email.nested.col-1 email.nested.col-2 .";
-      grid-template-rows: auto;
-      justify-items: center;
-      align-items: start;
-    }
-    .nested.col-1 {
-      width: 100%;
-      text-align: center;
-      left: 25%;
-    }
-    .nested.col-2 {
-      width: 100%;
-      text-align: left;
-    }
-    .slogan {
-      padding: 20px;
-      padding-left: 40px;   
-      font-size: 26px;
-      text-align: center;
-      max-width: 400px;		
-      transform: translate(0%, 100%);
-    }
-    
-  }  
+  .test {
+    float: none;
+    display: initial;
+    width: 100%;
+    text-align: center;
+  }
+  .row1 {
+    height: auto;
+    margin: 0 auto;
+    overflow: none;
+    width: 100%
+  }
+  .address, .phone, .email {
+    display: grid;
+      grid-template-columns: 100px 1fr 1fr auto;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-areas: 
+      ". address.nested.col-1 address.nested.col-2 ."
+      ". phone.nested.col-1 phone.nested.col-2 ."
+      ". email.nested.col-1 email.nested.col-2 .";
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: start;
+  }
+  .nested.col-1 {
+    width: 100%;
+    text-align: center;
+    left: 25%;
+  }
+  .nested.col-2 {
+    width: 100%;
+    text-align: left;
+  }
+  .slogan {
+    padding: 20px;
+    padding-left: 40px;   
+    font-size: 26px;
+    text-align: center;
+    max-width: 400px;		
+    transform: translate(0%, 100%);
+  }
+  
+}  
   
