@@ -416,7 +416,7 @@ body {
 /* Footer */
 .footer_row {		
   display: grid;
-  grid-template-columns: 1fr 1fr 34%;
+  grid-template-columns: 1fr 30% 34%;
   grid-template-rows: auto;
   background-color:var(--clr-dark);
   width: 100%;
@@ -432,7 +432,7 @@ body {
 }
 .contacts {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 40% 60%;
   grid-template-rows: auto;
   grid-template-areas: 
     "address address"
