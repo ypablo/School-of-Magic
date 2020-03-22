@@ -1,12 +1,19 @@
+@font-face {
+  font-family: 'modern_no._20regular';
+  src: url('../fonts/mod20-webfont.woff2') format('woff2'),
+       url('../fonts/mod20-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 *,
 *::before,
 *::after {
     box-sizing: border-box;
     margin:0;
-    padding: 0;
-    
+    padding:0;
 }
-
 
 :root {
     --ff-primary: "Open Sans", sans-serif;
@@ -31,9 +38,13 @@ body {
   background-color: var(--clr-light);
   color: var(--clr-dark);
   margin: 0;
-  /*font-family: var(--ff-primary);*/
+  font-family: "modern_no._20regular";
   font-size: var(--fs-body);
   line-height: 1.6;
+  
+}
+html {
+  scroll-behavior: smooth;
 }
 
 /* Navigation bar */
@@ -44,15 +55,20 @@ body {
   height: 50px;
   background-color: var(--clr-darker);  
   padding: 5px 20px;
-  position: sticky;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom:0;
+  overflow: hidden;
 }
 .nav_links { 
   list-style-type: none;
-  margin-right: 15rem;
+  margin-right: 5rem;
 }
 .nav_links li {
   display: inline-block;
@@ -73,7 +89,8 @@ body {
   
 }
 .logo {
-  margin-right: auto ;
+  margin-right: auto;
+  opacity: .7;
 }
 
 /* Hamburger */
@@ -114,7 +131,8 @@ body {
 
 
 /*Logo */
-.hero {
+.flag {
+  position: relative;
   background-image: url("../img/wizard-01.jpeg");	
   background-image: transparent;
   height: 500px;
@@ -128,18 +146,26 @@ body {
  
 }
 .slogan {
-  float: left;
-  display: table;
-  color: #fff;
-  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  /*float: left;
+  display: table;*/
+  color: var(--clr-light);
+  font-family: "modern_no._20regular";
+  font-weight: var(--fw-bold);
   background-color: rgba(0,0,0,0.5);
-  padding: 15px;
-  margin: 0 auto;
-  font-size: 38px;
+  padding: 1rem;
+  font-size: 5rem;
   text-align: center;
-  width: 60%;
-  max-width: 900px;
-  transform: translate(0%, 50%);   
+  width: 100%;
+  height: 30%;
+  /*max-width: 900px;*/
+  /*transform: translate(0%, 70%);  */
+  bottom: 0;
+  left: 0;
+  text-transform: uppercase; 
 }
 
 /* Benefits */
@@ -481,6 +507,15 @@ body {
   color:var(--clr-light);
   font-size: 1.2rem;	
   margin: 0 auto;
+}
+
+#alumni, #works  {
+  position: relative; 
+  top: -40px;
+}
+#projects {
+  position: relative; 
+  top: -55px;
 }  
 
     
@@ -527,7 +562,7 @@ body {
   .position {
       transform: translate(0, 0);
       font-size: 12px;
-      font-weight: bold;
+      font-weight: var(--fw-bold);
   }
     .layer2 img {
     transform: translate(0, 50px); 
