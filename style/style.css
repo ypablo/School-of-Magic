@@ -143,15 +143,12 @@ html {
   margin: 0 auto;
   width: 100%;	
   max-width: 1200px;
- 
 }
 .slogan {
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  /*float: left;
-  display: table;*/
   color: var(--clr-light);
   font-family: "modern_no._20regular";
   font-weight: var(--fw-bold);
@@ -161,11 +158,10 @@ html {
   text-align: center;
   width: 100%;
   height: 30%;
-  /*max-width: 900px;*/
-  /*transform: translate(0%, 70%);  */
   bottom: 0;
   left: 0;
   text-transform: uppercase; 
+  border-top: .5rem solid var(--clr-light);
 }
 
 /* Benefits */
