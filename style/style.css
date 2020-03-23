@@ -695,10 +695,15 @@ html {
     margin: 0;
   }
   @media (max-width: 550px) {
+    /*navbar*/
+  .slogan {
+    font-size: 3rem;
+  }  
     /*gallery*/
   .gal:nth-last-of-type(5) {
     display:none;
   }
+  
 }
 
 
