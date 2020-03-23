@@ -320,24 +320,9 @@ html {
 .member:hover p{
   color: var(--clr-darker);
 }
-.member:hover .shade { 
-  opacity: .5;
-}
 .member:hover img {
   cursor: pointer;
   filter: brightness(175%);
-}
-.shade {
-  opacity: 0;
-  position: absolute;
-  bottom: 25%;
-  left: 25%;
-  width: 45%;
-  height: 72%;
-  padding: 1rem;
-  background-color: var(--clr-dark);
-  transition: .5s ease-in-out;
-  z-index: -1;
 }
 
 /* Project */
@@ -714,7 +699,13 @@ html {
       margin-right: auto;
       border: 1px solid red;
       width: 100%;
+      height: auto;
     }
+    .member {
+      margin:0;
+      border: 1px solid green;
+    }
+    
 
     /*ranking*/
     .data {
