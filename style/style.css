@@ -706,6 +706,16 @@ html {
   }
 
   @media (max-width: 480px) {
+    /*Notable alumni*/
+    .members {
+      display: flex;
+      flex-direction: column;
+      margin-left: auto;
+      margin-right: auto;
+      border: 1px solid red;
+      width: 100%;
+    }
+
     /*ranking*/
     .data {
       display: grid;
