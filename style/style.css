@@ -691,6 +691,14 @@ html {
   }
 
   @media (max-width: 480px) {
+    /*gallery*/
+    .gallery1,.gallery2 {
+      max-width: 480px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 2fr));
+      grid-template-rows: 1fr 1fr;
+      margin: 0 1rem;
+    }
     /*Notable alumni*/
     .members {
       display: flex;
