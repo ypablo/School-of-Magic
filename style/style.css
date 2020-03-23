@@ -269,7 +269,7 @@ html {
   opacity: 0;
 }
 
-/* Notalble alumni */
+/* Notable alumni */
 .team {
   display: flex;
   flex-direction: column;
@@ -527,8 +527,6 @@ html {
 }  
 
 
-
-
 @media (max-width: 1220px) {
   .gallery1,.gallery2 {
     max-width: 950px;
@@ -548,9 +546,6 @@ html {
   .ranking h1 {
     width: 175px;
   }
-  /*.member p {
-    
-  }*/
   /*footer*/
   [class*="fab fa-"] {
     font-size: 2.5rem;
@@ -593,6 +588,18 @@ html {
     top: 0;
     left: 0;
   }
+  /*benefits*/
+  .benefits {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4rem;
+  }
+  .col-4:nth-child(2) {
+    border: 0;
+  }
+
   /*gallery*/
   .gallery1,.gallery2 {
     max-width: 950px;
@@ -631,6 +638,10 @@ html {
 }
     
 @media (max-width: 800px) {
+  /*nav bar*/
+  .nav_links {
+    display: none;
+  }
   /*ranking*/
   .rankings_title {
     margin:0;
