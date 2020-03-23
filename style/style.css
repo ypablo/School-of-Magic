@@ -599,7 +599,6 @@ html {
   .col-4:nth-child(2) {
     border: 0;
   }
-
   /*gallery*/
   .gallery1,.gallery2 {
     max-width: 950px;
@@ -667,7 +666,6 @@ html {
     grid-column: 2/4;
     grid-row: 2;
   }
-  
   /*footer*/
   .footer_row {		
     display: grid;
@@ -696,7 +694,11 @@ html {
     padding: 0;
     margin: 0;
   }
-  
+  @media (max-width: 550px) {
+    /*gallery*/
+  .gal:nth-last-of-type(5) {
+    display:none;
+  }
 }
 
 
