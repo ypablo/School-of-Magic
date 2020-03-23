@@ -742,12 +742,14 @@ html {
       overflow: hidden;
       margin: 0 auto;
     }
-    .footer_column {
-      padding: .5rem;
+    .footer_column h1{
+      padding:0;
+      margin:0;
     }
     [class*="fab fa-"] {
       font-size: 2rem;
     }
+    
 }
 
 
