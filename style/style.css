@@ -42,8 +42,8 @@ body {
   font-family: "vivaldiitalic";
   font-size: var(--fs-body);
   line-height: 1.6;
-  
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -565,12 +565,18 @@ html {
 
 
 @media (max-width: 1220px) {
+  /*nav bar*/
+  .nav_links li a {
+    font-size: 1.1rem;
+  }
+  /*gallery*/
   .gallery1,.gallery2 {
     max-width: 950px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(190px, 5fr));
     margin: 0 auto;
   }
+  /*ranking*/
   .data {
     margin: 0 1rem;
   }
@@ -591,7 +597,6 @@ html {
   [class*="icon-btn"] {
     text-decoration: none;
   }
-  
 }
 
 @media (max-width: 998px) {
@@ -603,11 +608,10 @@ html {
     padding: 0;
   }
   .nav_links li {
-    padding: 0 1rem;
+    padding: 0 1.5rem;
   }
   .nav_links li a {
     font-size: 1rem;
-    font-weight: var(--fw-reg);
     margin: 0;
     padding: 0;
   }
