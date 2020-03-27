@@ -5,7 +5,6 @@
          url('vivaldii-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 *,
@@ -204,7 +203,7 @@ html {
   align-items: center;
   position: absolute;
   color: var(--clr-light);
-  font-family: "modern_no._20regular";
+  font-family: "vivaldiitalic";
   font-weight: var(--fw-bold);
   background-color: rgba(0,0,0,0.5);
   padding: 1rem;
@@ -600,7 +599,10 @@ html {
 }
 
 @media (max-width: 998px) {
-  /*header*/
+  /*nav bar*/
+  .hamburger_menu {
+    transform: translateX(100%);
+  }
   .nav_links {
     display:flex;
     justify-content: space-evenly;
@@ -615,6 +617,7 @@ html {
     margin: 0;
     padding: 0;
   }
+
   /* label */
   .flag {
     max-height: 20rem;
