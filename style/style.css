@@ -1,37 +1,30 @@
 
 @font-face {
-    font-family: 'vivaldiitalic';
-    src: url('vivaldii-webfont.woff2') format('woff2'),
-         url('vivaldii-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'vivaldiitalic';
+  src: url('vivaldii-webfont.woff2') format('woff2'),
+        url('vivaldii-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-    margin:0;
-    padding:0;
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
 }
 
 :root {
-    --ff-primary: "Open Sans", sans-serif;
-    --ff-secondary: "Roboto", sans-serif;
-    --fw-reg: 300;
-    --fw-bold: 900;
-
-    --clr-light:#ecf0f1;
-    --clr-dark: #6D6E70;
-    --clr-darker: #313234;
-    --clr-accent:   #7b241c;
-
-    --fs-h1: 3rem;
-    --fs-h2: 2.25rem;
-    --fs-h3: 1.25rem;
-    --fs-body: 1rem;
-
-    --bs: .4em .5em 1em rgba(0,0,0,.5);
+  --fw-bold: 900;
+  --clr-light:#ecf0f1;
+  --clr-dark: #6D6E70;
+  --clr-darker: #313234;
+  --clr-accent:   #7b241c;
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
 }
 
 body {
@@ -354,7 +347,7 @@ html {
   width: 50%;
   height: 50%;
   object-fit: cover;
-  box-shadow: var(--bs);
+  box-shadow: .4em .5em 1em rgba(0,0,0,.5);
   background-color: var(--clr-dark);
   transition: .7s ease-in-out;
 }
