@@ -643,6 +643,9 @@ html {
     grid-template-columns: repeat(auto-fit, minmax(100px, 5fr));
     margin: 0 1rem;
   }
+  .layer {
+    font-size: var(--fs-body);
+  }
   /*ranking*/
   .data {
     margin: 0 1rem;
@@ -681,6 +684,10 @@ html {
   /*nav bar*/
   .nav_links {
     display: none;
+  }
+  /*gallery*/
+  .layer {
+    font-size: .8rem;
   }
   /*ranking*/
   .rankings_title {
@@ -745,6 +752,10 @@ html {
   .gal:nth-last-of-type(5) {
     display:none;
   }
+  .layer {
+   font-size: .7rem;   
+  }
+  }
 
   @media (max-width: 480px) {
     /*gallery*/
@@ -754,6 +765,10 @@ html {
       grid-template-rows: 1fr;
       margin: 0 1rem;
     }
+    .layer {
+      font-size: var(--fs-h3);
+    }
+    
     /*Notable alumni*/
     .members {
       display: flex;
